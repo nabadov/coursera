@@ -17,8 +17,7 @@
         var count = dishesList.length;
         if (count <=3) {
           $scope.message = "Enjoy";
-        }
-        else {
+        } else {
           $scope.message = "Too much!";
         }
       }
