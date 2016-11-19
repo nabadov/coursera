@@ -32,7 +32,13 @@
     var service = this;
 
     // List of shopping items
-    var toBuy = [{name: "cookies", quantity: 10}, {name: "cookies", quantity: 10}];
+    var toBuy = [
+      {name: "cookies", quantity: 10},
+      {name: "burgers", quantity: 2},
+      {name: "chiken", quantity: 4},
+      {name: "meal", quantity: 3},
+      {name: "cola", quantity: 1}
+    ];
     var alreadyBougth = [];
 
     service.buy = function (itemIndex) {
