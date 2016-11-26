@@ -1,11 +1,27 @@
 <div ng-if="list.items.length">
-  <h3>Found these items for the search term {{ list.myTerm }}</h3>
-  <ol>
-    <li ng-repeat="item in list.items">
-      <b>{{ item.short_name }}</b> - {{ item.name }} : <i>{{ item.description }}</i>
-      <button class="btn btn-danger" ng-click="list.onRemove({index: $index});">Don't want this one!</button>
-    </li>
-  </ol>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th colspan="4">Found these items for the search term {{ list.myTerm }}</th>
+      </tr>
+      <tr>
+        <th>Short name</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in list.items">
+        <td> <b>{{ item.short_name }}</b></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <button class="btn btn-danger" ng-click="list.onRemove({index: $index});">Don't want this one!</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <div ng-if="list.myMessage.length">
   <h3>{{ list.myMessage }}</h3>
