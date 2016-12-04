@@ -1,0 +1,5 @@
+<table class="table table-bordered table-hover">
+  <tr ng-repeat="item in $ctrl.items">
+    <td><a class="btn btn-primary" ui-sref="items({category: item.short_name})">{{item.name}}</a></td>
+  </tr>
+</table>
